@@ -1,0 +1,10 @@
+server:
+  port: 9000
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: user
+info:
+  version: "0.1.0"

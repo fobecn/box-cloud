@@ -1,0 +1,17 @@
+server:
+  port: 8888 #能默认就默认原则,微服开启配置后默认端口
+spring:
+  application:
+    name: config
+  profiles:
+      active: native
+info:
+  version: "0.1.0"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  file: config.log
+
+
+
