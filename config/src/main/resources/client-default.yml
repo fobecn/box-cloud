@@ -5,6 +5,6 @@ spring:
     ansi:
       enabled: always
   application:
-    name: client-test
+    name: client
 info:
   version: "0.1.0"

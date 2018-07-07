@@ -13,8 +13,13 @@ Box Cloud 一套基于Spring cloud Finchley的治理代码，
 * Box-Market-WechatAppApis: 微信AppUI接口
 * Box-Market-PcApis:电脑接口
 
-# 其他
-* 解答部分入门问题和疑问，由于Spring cloud 开箱即用这套代码没啥技术含量。
+# 约定
+* 我们正常情况只使用默认值，并兼容默认值
 
+# 其他
+* 解答部分入门问题和疑问，由于Spring cloud 开箱即用这套代码没啥技术含量，更多的是使用例子。
+
+# 相关代码
+https://github.com/fobecn/box-cloud.git
 
 Build spring cloud Finchley base together.

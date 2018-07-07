@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8761
+info:
+  version: "0.1.0"
+spring:
+  application:
+      name: hystrix
+
+hystrix:
+  shareSecurityContext: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
