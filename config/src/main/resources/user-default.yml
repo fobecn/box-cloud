@@ -1,10 +1,52 @@
 server:
-  port: 9000
+  port: 8101
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+      prefer-ip-address: true
 spring:
-  output:
-    ansi:
-      enabled: always
   application:
     name: user
+  datasource:
+    url: jdbc:mysql://localhost:3306/boxes
+    username: root
+    password: 95317677
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+      hibernate:
+        ddl-auto: update
+      open-in-view: true
+      show-sql: true
+aliyun:
+  oss:
+    access-key-id: VKyT6sgzDo9YP4fe
+    access-key-secret: gFFi3qdyQeExHB3DDVjeOWDXhd5fhP
+    bucket: club10000
+    oss-endpoint: http://oss-cn-qingdao.aliyuncs.com/
+    cdn: http://club10000.img-cn-qingdao.aliyuncs.com/
 info:
   version: "0.1.0"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  file: user.log
+hystrix:
+  shareSecurityContext: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+  #pattern:
+    #file: "%d{yyyy/MM/dd } - %msg%n"
+
+
+
+
+

@@ -39,7 +39,6 @@
         <module>config</module>
         <module>eureka</module>
         <module>hystrix</module>
-        <module>hystrix-client</module>
     </modules>
 
 

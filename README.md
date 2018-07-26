@@ -6,8 +6,8 @@ Box Cloud 一套基于Spring cloud Finchley的治理代码，
 * Box:业务技术服务
 * Box-Market:业务级别,通用业务依赖Box
 * Box-Oauth:统一登陆
-* Box-Master:通用后台管理
-* Box-Master-Market:依赖Box-Master扩展业务相关管理
+* Box-Dashboard:通用后台管理
+* Box-Dashboard-Market:依赖Box-Dashboard扩展业务相关管理
 
 * Box-Market-WechatApis: 微信UI接口
 * Box-Market-WechatAppApis: 微信AppUI接口
