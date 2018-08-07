@@ -1,0 +1,59 @@
+
+server:
+  port: 8201
+  servlet:
+    context-path: /
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: dashboard
+  thymeleaf:
+    cache: false  #关闭thymeleaf缓存 开发时使用 否则没有实时画面
+#    check-template-location: true    # 检查模板是否存在，然后再呈现
+#    mode: HTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    servlet:
+#      content-type: text/html
+
+security:
+  oauth2:
+    sessions: always
+    client:
+      client-id: dashboard
+      client-secret: 123456
+      access-token-uri: http://localhost:8200/uaa/oauth/token
+      user-authorization-uri: http://localhost:8200/uaa/oauth/authorize
+    sso:
+      login-path: /uaa/login
+    resource:
+      token-info-uri: http://localhost:8200/uaa/oauth/check_token
+
+
+info:
+  version: "0.1.0"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  file: dashboard.log
+hystrix:
+  shareSecurityContext: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: feign
+
+
+  #pattern:
+    #file: "%d{yyyy/MM/dd } - %msg%n"
+
+
+
+
+
