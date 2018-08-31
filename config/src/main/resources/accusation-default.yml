@@ -1,0 +1,46 @@
+server:
+  port: 8204
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: accusation
+  datasource:
+    url: jdbc:mysql://localhost:3306/boxes?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 95317677
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+    show-sql: true
+aliyun:
+  oss:
+    access-key-id: LTAI5dtRyPS3lMs1
+    access-key-secret: 7MagrMbVyv5B7xQ9rXRzw9HfnnnjfT
+    bucket: stay-test
+    oss-endpoint: http://oss-cn-shanghai.aliyuncs.com/
+    cdn: http://stay-test.oss-cn-shanghai.aliyuncs.com/
+
+info:
+  version: "0.1.0"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  file: accusation.log
+
+
+  #pattern:
+    #file: "%d{yyyy/MM/dd } - %msg%n"
+
+
+
+
+
