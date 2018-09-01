@@ -9,7 +9,7 @@ spring:
     ansi:
       enabled: always
   application:
-    name: moment
+    name: message
   datasource:
     url: jdbc:mysql://localhost:3306/boxes?autoReconnect=true&useSSL=false&characterEncoding=utf-8
     username: root
@@ -34,7 +34,7 @@ logging:
   level:
     root: INFO
     org.springframework.web: INFO
-  file: moment.log
+  file: message.log
 
 
   #pattern:

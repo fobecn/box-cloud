@@ -39,6 +39,7 @@
         <module>config</module>
         <module>eureka</module>
         <module>hystrix</module>
+        <module>gateway</module>
     </modules>
 
 

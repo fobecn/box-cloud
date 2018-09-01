@@ -1,0 +1,36 @@
+server:
+  port: 9000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+      - id: moment
+        uri: lb://moment
+        predicates:
+        - Path=/moments/**, /moment/**
+
+info:
+  version: "0.1.0"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+  file: gateway.log
+
+
+  #pattern:
+    #file: "%d{yyyy/MM/dd } - %msg%n"
+
+
+
+
+
