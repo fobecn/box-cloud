@@ -3,11 +3,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://beta.buchuju.net:8761/eureka/
 spring:
-  output:
-    ansi:
-      enabled: always
   application:
     name: gateway
   cloud:
@@ -16,7 +13,56 @@ spring:
       - id: moment
         uri: lb://moment
         predicates:
-        - Path=/moments/**, /moment/**
+        - Path=/moment/**
+      - id: moments
+        uri: lb://moment
+        predicates:
+        - Path=/moments/**
+      #category
+      - id: moment
+        uri: lb://moment
+        predicates:
+        - Path=/category/**
+      - id: moments
+        uri: lb://moment
+        predicates:
+        - Path=/categories/**
+      #message
+      - id: message
+        uri: lb://message
+        predicates:
+        - Path=/message/**
+      - id: messages
+        uri: lb://message
+        predicates:
+        - Path=/messages/**
+      #mark
+      - id: mark
+        uri: lb://mark
+        predicates:
+        - Path=/mark/**
+      - id: marks
+        uri: lb://mark
+        predicates:
+        - Path=/marks/**
+      #comment
+      - id: comment
+        uri: lb://comment
+        predicates:
+        - Path=/comment/**
+      - id: comments
+        uri: lb://comment
+        predicates:
+        - Path=/comments/**
+      #accusation
+      - id: accusation
+        uri: lb://accusation
+        predicates:
+        - Path=/accusation/**
+      - id: accusations
+        uri: lb://accusation
+        predicates:
+        - Path=/accusations/**
 
 info:
   version: "0.1.0"

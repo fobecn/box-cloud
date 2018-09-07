@@ -18,6 +18,15 @@ spring:
         uri: lb://moment
         predicates:
         - Path=/moments/**
+      #category
+      - id: moment
+        uri: lb://moment
+        predicates:
+        - Path=/category/**
+      - id: moments
+        uri: lb://moment
+        predicates:
+        - Path=/categories/**
       #message
       - id: message
         uri: lb://message
