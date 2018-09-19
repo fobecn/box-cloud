@@ -4,6 +4,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://beta.buchuju.net:8761/eureka/
+  #instance:
+   #ip-address:  #指定此实例的ip
+    #prefer-ip-address: true  #注册时使用ip而不是主机名
 spring:
   application:
     name: gateway

@@ -10,20 +10,20 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: moment
-        uri: lb://moment
-        predicates:
-        - Path=/moment/**
       - id: moments
         uri: lb://moment
         predicates:
         - Path=/moments/**
-      #category
       - id: moment
         uri: lb://moment
         predicates:
+        - Path=/moment/**
+      #category
+      - id: category
+        uri: lb://moment
+        predicates:
         - Path=/category/**
-      - id: moments
+      - id: categories
         uri: lb://moment
         predicates:
         - Path=/categories/**
@@ -63,6 +63,15 @@ spring:
         uri: lb://accusation
         predicates:
         - Path=/accusations/**
+      #fee
+      - id: fee
+        uri: lb://fee
+        predicates:
+        - Path=/fee/**
+      - id: fees
+        uri: lb://fee
+        predicates:
+        - Path=/fees/**
 info:
   version: "0.1.0"
 logging:
