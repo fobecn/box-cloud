@@ -10,68 +10,72 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: moments
-        uri: lb://moment
+      - id: stay
+        uri: lb://stay
         predicates:
-        - Path=/moments/**
-      - id: moment
-        uri: lb://moment
-        predicates:
-        - Path=/moment/**
-      #category
-      - id: category
-        uri: lb://moment
-        predicates:
-        - Path=/category/**
-      - id: categories
-        uri: lb://moment
-        predicates:
-        - Path=/categories/**
-      #message
-      - id: message
-        uri: lb://message
-        predicates:
-        - Path=/message/**
-      - id: messages
-        uri: lb://message
-        predicates:
-        - Path=/messages/**
-      #mark
-      - id: mark
-        uri: lb://mark
-        predicates:
-        - Path=/mark/**
-      - id: marks
-        uri: lb://mark
-        predicates:
-        - Path=/marks/**
-      #comment
-      - id: comment
-        uri: lb://comment
-        predicates:
-        - Path=/comment/**
-      - id: comments
-        uri: lb://comment
-        predicates:
-        - Path=/comments/**
-      #accusation
-      - id: accusation
-        uri: lb://accusation
-        predicates:
-        - Path=/accusation/**
-      - id: accusations
-        uri: lb://accusation
-        predicates:
-        - Path=/accusations/**
-      #fee
-      - id: fee
-        uri: lb://fee
-        predicates:
-        - Path=/fee/**
-      - id: fees
-        uri: lb://fee
-        predicates:
-        - Path=/fees/**
+        - Path=/**
+#      - id: moments
+#        uri: lb://moment
+#        predicates:
+#        - Path=/moments/**
+#      - id: moment
+#        uri: lb://moment
+#        predicates:
+#        - Path=/moment/**
+#      #category
+#      - id: category
+#        uri: lb://moment
+#        predicates:
+#        - Path=/category/**
+#      - id: categories
+#        uri: lb://moment
+#        predicates:
+#        - Path=/categories/**
+#      #message
+#      - id: message
+#        uri: lb://message
+#        predicates:
+#        - Path=/message/**
+#      - id: messages
+#        uri: lb://message
+#        predicates:
+#        - Path=/messages/**
+#      #mark
+#      - id: mark
+#        uri: lb://mark
+#        predicates:
+#        - Path=/mark/**
+#      - id: marks
+#        uri: lb://mark
+#        predicates:
+#        - Path=/marks/**
+#      #comment
+#      - id: comment
+#        uri: lb://comment
+#        predicates:
+#        - Path=/comment/**
+#      - id: comments
+#        uri: lb://comment
+#        predicates:
+#        - Path=/comments/**
+#      #accusation
+#      - id: accusation
+#        uri: lb://accusation
+#        predicates:
+#        - Path=/accusation/**
+#      - id: accusations
+#        uri: lb://accusation
+#        predicates:
+#        - Path=/accusations/**
+#      #fee
+#      - id: fee
+#        uri: lb://fee
+#        predicates:
+#        - Path=/fee/**
+#      - id: fees
+#        uri: lb://fee
+#        predicates:
+#        - Path=/fees/**
 info:
   version: "0.1.0"
 logging:
